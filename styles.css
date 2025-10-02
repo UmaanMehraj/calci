@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.master-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 655px;
+  width: 500px;
+  border: 2px solid red;
+  margin: 40px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: last baseline;
+  height: 160px;
+  width: auto;
+  margin: 20px;
+  border: 1px solid red;
+}
+
+.btns {
+  height: 430px;
+  width: auto;
+  margin: 20px;
+  border: 1px solid red;
+}
+.row-1,
+.row-2,
+.row-3,
+.row-4 {
+}
+
+button {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100px;
+}
