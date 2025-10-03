@@ -25,22 +25,40 @@ body {
   width: auto;
   margin: 20px;
   border: 1px solid red;
+  font-family: "Libertinus Math", system-ui;
+  font-size: 35px;
+}
+.content {
+  padding: 0 0 15px 10px;
 }
 
 .btns {
-  height: 430px;
-  width: auto;
-  margin: 20px;
+  height: 420px;
+  width: 456px;
   border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
 }
 .row-1,
 .row-2,
 .row-3,
 .row-4 {
+  height: 105px;
+  width: auto;
 }
 
 button {
-  box-sizing: border-box;
-  height: 100px;
-  width: 100px;
+  height: 105px;
+  width: 111px;
+}
+.text {
+  height: 60px;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: monospace;
+  background-color: thistle;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid black;
 }
