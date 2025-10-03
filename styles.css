@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  height: 655px;
+  height: 640px;
   width: 500px;
   border: 2px solid red;
   margin: 40px;
@@ -33,7 +33,7 @@ body {
 }
 
 .btns {
-  height: 420px;
+  height: 400px;
   width: 456px;
   border: 1px solid red;
   display: flex;
@@ -44,13 +44,24 @@ body {
 .row-2,
 .row-3,
 .row-4 {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 10px;
   height: 105px;
   width: auto;
 }
 
+.row-1 > div,
+.row-2 > div,
+.row-3 > div,
+.row-4 > div {
+  display: flex;
+  justify-content: space-around;
+}
+
 button {
-  height: 105px;
-  width: 111px;
+  height: 55px;
+  width: 95px;
 }
 .text {
   height: 60px;
