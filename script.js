@@ -17,17 +17,17 @@ const divide = (a, b) => {
 let num1, num2, op
 
 const operate = (num1, num2, op) => {
-    if (op === '+') {
-        add(num1, num2)
+    if (op == '+') {
+        return add(num1, num2)
     }
-    else if (op === '-') {
-        subtract(num1, num2)
+    else if (op == '-') {
+        return subtract(num1, num2)
     }
-    else if (op === '*') {
-        multiply(num1, num2)
+    else if (op == '*') {
+        return multiply(num1, num2)
     }
     else {
-        divide(num1, num2)
+        return divide(num1, num2)
     }
 }
 
@@ -39,7 +39,7 @@ const operators = document.querySelectorAll('.op')
 
 operators.forEach(element => {
     element.addEventListener('click', (e) => {
-        op = e.target.innerText
+        op = (e.target.innerText)
     })
 })
 
@@ -65,8 +65,15 @@ btn.forEach(element => {
 const equals = document.querySelector('#equals')
 
 equals.addEventListener('click', () => {
-    operate(display_num[0], display_num[1], op)
+    const text = operate(display_num[0], display_num[1], op)
+    content.innerHTML = text;
 
+})
+
+const clear = document.querySelector('#clear')
+
+clear.addEventListener('click', () => {
+    content.innerText = "0";
 })
 
 
