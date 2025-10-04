@@ -8,37 +8,44 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: snow;
 }
 
 .container {
-  height: 640px;
-  width: 500px;
-  border: 2px solid red;
+  background-color: #4c4356;
+  height: 580px;
+  width: 420px;
+  border: 4px solid paleturquoise;
   margin: 40px;
+  border-radius: 5%;
 }
 
 .display {
+  background-color: #d2e2e3;
   display: flex;
   flex-direction: column-reverse;
-  justify-content: last baseline;
-  height: 160px;
+  height: 120px;
   width: auto;
   margin: 20px;
-  border: 1px solid red;
-  font-family: "Libertinus Math", system-ui;
+  border: 1px solid paleturquoise;
+  font-family: monospace;
   font-size: 35px;
+  border-radius: 10px;
+  padding-bottom: 20px;
 }
 .content {
-  padding: 0 0 15px 10px;
+  padding: 0 10px 0 10px;
+  align-self: flex-end;
 }
 
 .btns {
-  height: 400px;
-  width: 456px;
-  border: 1px solid red;
+  height: 380px;
+  width: 380px;
+  border: 1px solid paleturquoise;
   display: flex;
   flex-direction: column;
   margin: 20px;
+  border-radius: 10px;
 }
 .row-1,
 .row-2,
@@ -46,7 +53,8 @@ body {
 .row-4 {
   box-sizing: border-box;
   padding: 5px;
-  margin: 10px;
+  margin: 5px;
+  margin-top: 15px;
   height: 105px;
   width: auto;
 }
@@ -60,16 +68,26 @@ body {
 }
 
 button {
+  background-color: #11121c;
+  color: #f5f6fa;
   height: 55px;
-  width: 95px;
+  width: 85px;
+  border-radius: 10px;
 }
-.text {
-  height: 60px;
+.text,
+.footer {
+  height: 50px;
   font-size: 40px;
   font-weight: 500;
   font-family: monospace;
   background-color: thistle;
   text-align: center;
   padding: 5px;
-  border: 2px solid black;
+  padding-top: 10px;
+}
+
+.footer {
+  height: 30px;
+  font-size: 16px;
+  padding-top: 10px;
 }
