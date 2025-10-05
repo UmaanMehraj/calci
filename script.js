@@ -48,6 +48,7 @@ operators.forEach(element => {
 
 
 
+
 let display_num = []
 
 
@@ -73,7 +74,7 @@ equals.addEventListener('click', () => {
 const clear = document.querySelector('#clear')
 
 clear.addEventListener('click', () => {
-    content.innerText = "0";
+    location.reload()
 })
 
 
