@@ -14,7 +14,7 @@ const divide = (a, b) => {
     return a / b
 }
 
-let num1, num2, op
+let num, nextNum, op
 
 const operate = (num1, num2, op) => {
     if (op == '+') {
@@ -31,7 +31,7 @@ const operate = (num1, num2, op) => {
     }
 }
 
-const btn = document.querySelectorAll('.nums')
+const nums = document.querySelectorAll('.nums')
 
 const content = document.querySelector('.content')
 
@@ -45,19 +45,21 @@ operators.forEach(element => {
 
 
 
+let display_num
 
 
-
-
-let display_num = []
-
-
-btn.forEach(element => {
+nums.forEach(element => {
     element.addEventListener('click', (e) => {
         content.innerText = e.target.id
-        display_num.push(parseInt(content.innerText))
-    })
+        display_num = parseInt(content.innerText)
 
+        if (num) {
+            nextNum = display_num
+        }
+        else {
+            num = display_num
+        }
+    })
 })
 
 
@@ -66,8 +68,9 @@ btn.forEach(element => {
 const equals = document.querySelector('#equals')
 
 equals.addEventListener('click', () => {
-    const text = operate(display_num[0], display_num[1], op)
+    const text = operate(num, nextNum, op)
     content.innerHTML = text;
+    num = text;
 
 })
 
