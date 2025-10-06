@@ -57,15 +57,17 @@ nums.forEach(element => {
     element.addEventListener('click', (e) => {
         content.innerText = e.target.id
         display_num = parseInt(content.innerText)
+        if (op === '') {
+            num = display_num
+        }
         if (num) {
             nextNum = display_num
             if (num && nextNum && op) {
-                const text = operate(num, nextNum, op)
+                text = operate(num, nextNum, op)
                 content.innerHTML = Math.round(text, 1);
                 num = text;
                 op = ''
             }
-
         }
         else {
             num = display_num
