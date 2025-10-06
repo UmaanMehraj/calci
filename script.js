@@ -11,7 +11,12 @@ const multiply = (a, b) => {
 }
 
 const divide = (a, b) => {
-    return a / b
+    if (b !== 0) {
+        return a / b
+    }
+    else {
+        return "Division by zero not possible!"
+    }
 }
 
 let num, nextNum, op
@@ -52,15 +57,30 @@ nums.forEach(element => {
     element.addEventListener('click', (e) => {
         content.innerText = e.target.id
         display_num = parseInt(content.innerText)
-
         if (num) {
             nextNum = display_num
+            if (num && nextNum && op) {
+                const text = operate(num, nextNum, op)
+                content.innerHTML = Math.round(text, 1);
+                num = text;
+                op = ''
+            }
+
         }
         else {
             num = display_num
+            if (num && nextNum && op) {
+                const text = operate(num, nextNum, op)
+                content.innerHTML = Math.round(text, 1);
+                num = text;
+                op = ''
+            }
+
         }
     })
 })
+
+
 
 
 
@@ -71,8 +91,11 @@ equals.addEventListener('click', () => {
     const text = operate(num, nextNum, op)
     content.innerHTML = text;
     num = text;
+    op = ''
 
 })
+
+
 
 const clear = document.querySelector('#clear')
 
